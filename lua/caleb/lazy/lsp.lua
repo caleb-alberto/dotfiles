@@ -46,7 +46,7 @@ return {
 
       -- Ensure language servers are installed
       require('mason-lspconfig').setup({
-        ensure_installed = { 'lua_ls', 'ts_ls', 'pyright', 'rust_analyzer' }
+        ensure_installed = { 'lua_ls', 'ts_ls', 'pyright', 'rust_analyzer', 'clangd'}
       })
 
       -- Extend capabilities for nvim-cmp
@@ -62,6 +62,7 @@ return {
       lspconfig.lua_ls.setup({})
       lspconfig.ts_ls.setup({})
       lspconfig.pyright.setup({})
+      lspconfig.clangd.setup({})
       lspconfig.rust_analyzer.setup({})
 
       -- LSP keymaps when a server is attached
