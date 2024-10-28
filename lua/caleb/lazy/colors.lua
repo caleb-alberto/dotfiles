@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-	color = color or "everforest"
+	color = color or "zenbones"
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -17,6 +17,38 @@ return {
 		lazy = false,
 		opts = {},
 	},
+    {
+        "aktersnurra/no-clown-fiesta.nvim",
+        name = "no-clown-fiesta",
+        lazy = false,
+        config = function()
+            -- You can set options for the colorscheme here if needed
+            require("no-clown-fiesta").setup({
+                styles = {
+                    comments = { italic = true }, -- Example of setting italic for comments
+                    functions = { bold = true }, -- Example of making functions bold
+                    keywords = { italic = true }, -- Example of setting italic for keywords
+                    variables = { italic = false }, -- Example of regular variables
+                    -- Add more styles as needed
+                },
+            })
+
+            -- Call your custom function to apply colors and settings
+        end,
+    },
+    {
+        "zenbones-theme/zenbones.nvim", -- Correct repository for zenbones.nvim
+        name = "zenbones",
+        lazy = false,
+        dependencies = {
+            "rktjmp/lush.nvim"
+        },
+        config = function()
+            -- Optional: Set global Neovim options related to the theme
+            vim.opt.background = "light" -- or "dark" depending on your preference
+            ColorMyPencils()
+        end,
+    },
 	{
 		"ellisonleao/gruvbox.nvim",
 		name = "gruvbox",
@@ -89,7 +121,6 @@ return {
 		priority = 1000, -- make sure to load this before all the other start plugins
 		-- Optional; default configuration will be used if setup isn't called.
 		config = function()
-			ColorMyPencils()
 		end,
 	},
 
