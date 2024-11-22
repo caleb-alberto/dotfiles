@@ -6,8 +6,8 @@ return {
       require('lualine').setup {
         options = {
           theme = 'auto',  -- Automatically adapts to your colorscheme
-          section_separators = { left = '', right = '' },  -- Rounded separators
-          component_separators = { left = '', right = '' },  -- Small rounded separators
+          section_separators = { left = '', right = '' },  -- Rounded separators
+          component_separators = { left = '', right = '' },  -- Small rounded separators
           icons_enabled = true,
         },
         sections = {
