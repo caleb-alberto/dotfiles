@@ -61,10 +61,19 @@ return {
 
       -- Set up LSP servers
       local lspconfig = require('lspconfig')
-      lspconfig.lua_ls.setup({})
+      lspconfig.lua_ls.setup({cmd = {"/run/current-system/sw/bin/lua-language-server"}})
       lspconfig.ts_ls.setup({})
       lspconfig.pyright.setup({})
-      lspconfig.clangd.setup({})
+      lspconfig.clangd.setup({
+                cmd = { "/run/current-system/sw/bin/clangd", "--background-index" },
+                filetypes = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
+                root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".clangd", ".git"),
+                settings = {
+                    clangd = {
+                        fallbackFlags = { "-std=c++14" },
+                    },
+                },
+            })
       lspconfig.rust_analyzer.setup({})
 
       -- LSP keymaps when a server is attached

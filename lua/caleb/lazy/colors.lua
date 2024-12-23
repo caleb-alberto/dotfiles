@@ -1,13 +1,4 @@
-function ColorMyPencils(color)
-	color = color or "gruvbox"
-	vim.cmd.colorscheme(color)
-
-	--vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	--vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-end
-
 return {
-
     {
         "mellow-theme/mellow.nvim",
         name = "mellow",
@@ -62,36 +53,8 @@ return {
 	{
 		"morhetz/gruvbox",
 		name = "gruvbox",
+        priority = 1000,
         lazy = false,
-		config = function()
-			ColorMyPencils("gruvbox")
-return {
-    {
-        "RRethy/vim-illuminate",
-        config = function()
-            -- Default configuration for vim-illuminate
-            require("illuminate").configure({
-                delay = 120, -- Delay in ms before highlighting references
-                filetypes_denylist = { "NvimTree", "packer", "lazy" }, -- Ignore these filetypes
-                filetypes_allowlist = nil, -- Allow highlighting for these filetypes (nil = all except denylist)
-                modes_denylist = { "i" }, -- Do not illuminate in insert mode
-                providers = { "lsp", "treesitter", "regex" }, -- Providers to use
-            })
-
-            -- Keymaps for navigating references
-            vim.api.nvim_set_keymap('n', '<C-k>', '<cmd>lua require"illuminate".goto_next_reference(false)<CR>', { noremap = true, silent = true })
-            vim.api.nvim_set_keymap('n', '<C-o>', '<cmd>lua require"illuminate".goto_prev_reference(false)<CR>', { noremap = true, silent = true })
-            
-            -- Highlight customization (optional)
-            vim.cmd([[
-                hi def IlluminatedWordText guibg=#393939
-                hi def IlluminatedWordRead guibg=#393939
-                hi def IlluminatedWordWrite guibg=#393939
-            ]])
-        end,
-    },
-}
-		end,
 	},
 	{
 		"folke/tokyonight.nvim",
