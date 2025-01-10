@@ -1,5 +1,19 @@
 return {
     {
+        "iruzo/matrix-nvim",
+        name = "matrix",
+        lazy = false;
+        config = function()
+        end
+    },
+    {
+        "ficcdaf/ashen.nvim",
+        name = "ashen",
+        lazy = false;
+        config = function()
+        end
+    },
+    {
         "mellow-theme/mellow.nvim",
         name = "mellow",
         lazy = false;

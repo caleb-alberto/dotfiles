@@ -1,10 +1,13 @@
 vim.opt.guicursor = ""
-vim.cmd([[colorscheme gruvbox]])
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.cmd([[colorscheme zenburned]])
+vim.api.nvim_set_hl(0, "Identifier", { fg = "#bdae94" }) -- Variables
+vim.api.nvim_set_hl(0, "LineNr", { fg = "#d79921", bold = true })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#fabd2f", bold = true })
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
+
+vim.opt.cursorline = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
