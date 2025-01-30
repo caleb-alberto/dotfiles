@@ -45,6 +45,11 @@ bindsym $mod+Shift+s exec scrot -s ~/Pictures/screenshot_%Y-%m-%d-%H:%M:%S.png &
 # Fullscreen screenshot
 bindsym $mod+Shift+d exec scrot ~/Pictures/screenshot_%Y-%m-%d-%H:%M:%S.png && notify-send "Fullscreen screenshot saved!"
 
+# set webcam settings
+exec --no-startup-id v4l2-ctl -d /dev/video0 --set-ctrl=backlight_compensation=0
+exec --no-startup-id v4l2-ctl -d /dev/video0 --set-ctrl=brightness=110
+exec --no-startup-id v4l2-ctl -d /dev/video0 --set-ctrl=contrast=110
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
