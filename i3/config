@@ -41,9 +41,9 @@ exec --no-startup-id xrandr --output HDMI-1 --left-of HDMI-0
 
 #set keybinds for screenshot
 # Area selection screenshot
-bindsym $mod+Shift+s exec scrot -s ~/Pictures/screenshot_%Y-%m-%d-%H:%M:%S.png && notify-send "Area screenshot saved!"
+bindsym $mod+Shift+s exec maim --select ~/Pictures/$(date -u +'%Y.%m.%d-%H:%M:%S').png && notify-send "Area screenshot saved!"
 # Fullscreen screenshot
-bindsym $mod+Shift+d exec scrot ~/Pictures/screenshot_%Y-%m-%d-%H:%M:%S.png && notify-send "Fullscreen screenshot saved!"
+bindsym $mod+Shift+d exec scrot ~/Pictures/%Y.%m.%d-%H:%M:%S.png && notify-send "Fullscreen screenshot saved!"
 
 # set webcam settings
 exec --no-startup-id v4l2-ctl -d /dev/video0 --set-ctrl=backlight_compensation=0
