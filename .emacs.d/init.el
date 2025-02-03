@@ -2,8 +2,7 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-
-(tool-bar-mode -1)
+(menu-bar-mode -1)
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
 
