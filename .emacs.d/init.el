@@ -9,6 +9,36 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'zenburn :no-confirm)
 
+;; fuzzy finding
+(use-package ivy
+  :ensure t
+  :config
+  (ivy-mode 1))
+
+;; better command search
+(use-package counsel
+  :ensure t
+  :after ivy
+  :config
+  (counsel-mode 1))
+
+;; fuzzy search inside file
+(use-package swiper
+  :ensure t)
+
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-s") 'swiper)
+(global-set-key (kbd "C-SPC") 'set-mark-command)
+
+;; MAC only
+(setq interprogram-cut-function
+      (lambda (text &optional push)
+    (let* ((process-connection-type nil)
+           (pbproxy (start-process "pbcopy" "pbcopy" "/usr/bin/pbcopy")))
+      (process-send-string pbproxy text)
+      (process-send-eof pbproxy))))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
