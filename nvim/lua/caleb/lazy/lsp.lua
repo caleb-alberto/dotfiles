@@ -1,7 +1,7 @@
 return {
   {
     'neovim/nvim-lspconfig',
-    enabled = false,
+    enabled = true,
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
       'hrsh7th/cmp-nvim-lsp',  -- LSP source for nvim-cmp
@@ -49,7 +49,7 @@ return {
 
       -- Ensure language servers are installed
       require('mason-lspconfig').setup({
-        ensure_installed = { 'lua_ls', 'ts_ls', 'pyright', 'rust_analyzer', 'clangd'}
+        ensure_installed = { 'lua_ls', 'texlab', 'pyright', 'clangd'}
       })
 
       -- Extend capabilities for nvim-cmp
@@ -62,11 +62,10 @@ return {
 
       -- Set up LSP servers
       local lspconfig = require('lspconfig')
-      lspconfig.lua_ls.setup({})
-      lspconfig.ts_ls.setup({})
       lspconfig.pyright.setup({})
-      lspconfig.clangd.setup({})
-      lspconfig.rust_analyzer.setup({})
+      lspconfig.lua_ls.setup({})
+      lspconfig.texlab.setup({})
+      --lspconfig.clangd.setup({})
 
       -- LSP keymaps when a server is attached
       vim.api.nvim_create_autocmd('LspAttach', {

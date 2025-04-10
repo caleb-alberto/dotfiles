@@ -7,6 +7,13 @@ return {
         end
     },
     {
+        "blazkowolf/gruber-darker.nvim",
+        name = "gruber-darker",
+        lazy = false;
+        config = function ()
+        end
+    },
+    {
         "ficcdaf/ashen.nvim",
         name = "ashen",
         lazy = false;

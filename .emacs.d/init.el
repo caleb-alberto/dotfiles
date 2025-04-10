@@ -26,7 +26,7 @@
 	(auto-mode . emacs)))
 
 (defun my-cpp-style ()
-  (setq c-basic-offset 4)
+  (setq c-basic-offset 8)
   (setq indent-tabs-mode nil))
 
 (add-hook 'c++-mode-hook 'my-cpp-style)
