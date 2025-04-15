@@ -29,9 +29,6 @@ exec --no-startup-id ~/.config/i3/mouse_settings.sh
 #set caps lock to escape
 exec --no-startup-id setxkbmap -option caps:escape
 
-#run picom on startup
-exec --no-startup-id picom
-
 #set background image
 exec --no-startup-id feh --bg-scale /home/caleb/Downloads/Wallpaper-OS-X-El-Capitan-Mac.jpg
 
@@ -76,6 +73,9 @@ bindsym $mod+Return exec kitty
 
 # start a browser
 bindsym $mod+f exec firefox
+
+# start a browser
+bindsym $mod+q exec emacs
 
 # kill focused window
 bindsym $mod+Shift+q kill

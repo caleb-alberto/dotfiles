@@ -17,7 +17,7 @@ return {
         "blazkowolf/gruber-darker.nvim",
         name = "gruber-darker",
         lazy = false;
-        config = function ()
+        config = function()
         end
     },
     {
