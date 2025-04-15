@@ -1,5 +1,12 @@
 return {
     {
+        "lunacookies/vim-colors-xcode",
+        name = "vim-colors-xcode",
+        lazy = false;
+        config = function()
+        end
+    },
+    {
         "iruzo/matrix-nvim",
         name = "matrix",
         lazy = false;
