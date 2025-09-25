@@ -1,0 +1,55 @@
+
+;; ----- smex-history -----
+(
+ load-theme
+ package-install
+ package-delete
+ package-refresh-contents
+ package-upgrade
+ doc-view-mode
+ pdf-view-mode
+)
+
+;; ----- smex-data -----
+(
+ (cd . 1)
+ (load-theme . 16)
+ (make-directory . 2)
+ (compile . 26)
+ (execute-extended-command . 1)
+ (load-file . 3)
+ (ivy-mode . 1)
+ (version . 1)
+ (package-install . 17)
+ (ido-mode . 2)
+ (lua-mode . 1)
+ (magit . 1)
+ (magit-ediff-compare . 5)
+ (man . 1)
+ (ssh . 1)
+ (menu-bar-mode . 1)
+ (isearch-yank-line . 2)
+ (disable-theme . 2)
+ (doc-view-mode . 2)
+ (bookmark-set . 7)
+ (bookmark-jump . 10)
+ (revert-buffer . 1)
+ (bookmark-delete . 3)
+ (fireplace . 1)
+ (scroll-up . 1)
+ (scratch-buffer . 1)
+ (dired . 2)
+ (notes . 3)
+ (eww-open-file . 1)
+ (package-list-packages . 2)
+ (emms-play-url . 4)
+ (emms-add-url . 1)
+ (mpv-play . 1)
+ (package-delete . 4)
+ (calc . 2)
+ (org-toggle-pretty-entities . 1)
+ (pdf-tools-help . 3)
+ (pdf-view-mode . 2)
+ (package-upgrade . 1)
+ (package-refresh-contents . 1)
+)

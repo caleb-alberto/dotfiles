@@ -1,0 +1,13 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("qqq"
+ (filename . "~/Documents/C Programming Language - 2nd Edition (OCR).pdf")
+ (front-context-string . "%PDF-1.3\n%\304\345\362\345\353\247")
+ (rear-context-string)
+ (position . 1)
+ (last-modified 26832 30316 259660 0)
+ (page . 22)
+ (handler . doc-view-bookmark-jump))
+)

@@ -1,0 +1,34 @@
+# BEGIN_KITTY_THEME
+# Gruvbox Dark Hard
+include current-theme.conf
+# END_KITTY_THEME
+
+allow_remote_control yes
+cursor_shape block
+
+enable_audio_bell no
+listen_on unix:/tmp/mykittysocket
+
+map ctrl+shift+enter launch --cwd=current
+enabled_layouts tall:bias=50;full_size=1;mirrored=false
+
+#change macos option to alt key
+macos_option_as_alt yes
+
+padding_width 0
+padding_height 0
+fullscreen yes
+
+# Opacity (optional):
+background_opacity 0.9
+font_size 17.0
+
+window_padding_width 0
+window_padding_height 0
+
+# BEGIN_KITTY_FONTS
+font_family Mononoki Nerd Font Bold
+bold_font   Mononoki Nerd Font Bold
+italic_font Mononoki Nerd Font Bold Italic
+bold_italic_font Mononoki Nerd Font Bold Italic
+# END_KITTY_FONTS

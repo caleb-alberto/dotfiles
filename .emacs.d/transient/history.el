@@ -1,0 +1,5 @@
+((magit-commit nil)
+ (magit-dispatch nil)
+ (magit-push nil)
+ (magit-revision-history "ORIG_HEAD")
+ (magit-status-jump nil))
