@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/caleb/.vim/plugin'
+let g:netrw_dirhist_0='/home/caleb/.vim/plugin/vimacs'
+let g:netrw_dirhist_9='/home/caleb/.vim/plugin'
+let g:netrw_dirhist_8='/home/caleb/.vim'
+let g:netrw_dirhist_7='/home/caleb'
+let g:netrw_dirhist_6='/home/caleb/.config/gtk-4.0'
+let g:netrw_dirhist_5='/home/caleb/.config'
+let g:netrw_dirhist_4='/home/caleb/.config/gtk-3.0'
+let g:netrw_dirhist_3='/home/caleb/.config'
+let g:netrw_dirhist_2='/home/caleb/.config/gtk-2.0'

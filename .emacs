@@ -6,7 +6,7 @@
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
-(load-theme 'handmade t)
+
 (add-to-list 'default-frame-alist
              '(font . "Source Code Pro-15"))
 
@@ -75,18 +75,3 @@
 	   (pbproxy (start-process "pbcopy" "pbcopy" "/usr/bin/pbcopy")))
       (process-send-string pbproxy text)
       (process-send-eof pbproxy))))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   '("3d39093437469a0ae165c1813d454351b16e4534473f62bc6e3df41bb00ae558" "0325a6b5eea7e5febae709dab35ec8648908af12cf2d2b569bedc8da0a3a81c1" "01a9797244146bbae39b18ef37e6f2ca5bebded90d9fe3a2f342a9e863aaa4fd" "09b833239444ac3230f591e35e3c28a4d78f1556b107bafe0eb32b5977204d93" default))
- '(package-selected-packages
-   '(## pdf-tools mpv ## fireplace ssh lua-mode zenburn-theme undo-tree swiper smex org-modern multiple-cursors markdown-mode magit key-chord helm gruber-darker-theme)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

@@ -1,5 +1,6 @@
 /*
 *~
+*.JPG
 !.emacs
 !.gitignore
 !nvim/
@@ -7,3 +8,5 @@
 !tmux/
 !kitty/
 !.emacs.d/
+!.vim/undodir/
+!.vimrc
